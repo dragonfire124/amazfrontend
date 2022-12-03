@@ -1,7 +1,7 @@
 /* eslint-disable no-use-before-define */
-import { getProduct } from "../api";
-import { parseRequestUrl, rerender } from "../utils";
-import { getCartItems,setCartItems } from "../localStorage";
+import { getProduct } from "../api.js";
+import { parseRequestUrl, rerender } from "../utils.js";
+import { getCartItems,setCartItems } from "../localStorage.js";
 
 const addToCart=(item, forceUpdate =false)=>{
   let cartItems = getCartItems();

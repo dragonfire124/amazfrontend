@@ -1,9 +1,9 @@
 
 /* eslint-disable no-unused-vars */
 
-import { deliverOrder, getOrder, getPaypalClientId } from '../api';
-import { getUserInfo } from '../localStorage';
-import {  hideLoading, parseRequestUrl,  renderFunction,  rerender, showLoading, showMessage } from '../utils';
+import { deliverOrder, getOrder, getPaypalClientId } from '../api.js';
+import { getUserInfo } from '../localStorage.js';
+import {  hideLoading, parseRequestUrl,  renderFunction,  rerender, showLoading, showMessage } from '../utils.js';
 
 
 /*

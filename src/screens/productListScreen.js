@@ -1,8 +1,8 @@
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-alert */
-import dashBoardMenu from "../components/dashBoardMenu";
-import { createProduct, deleteProduct, getProducts } from "../api";
-import { hideLoading, rerender, showLoading, showMessage } from "../utils";
+import dashBoardMenu from "../components/dashBoardMenu.js";
+import { createProduct, deleteProduct, getProducts } from "../api.js";
+import { hideLoading, rerender, showLoading, showMessage } from "../utils.js";
 
 const  productlistScreen = {
     after_render :()=>{

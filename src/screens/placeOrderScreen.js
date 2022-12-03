@@ -1,7 +1,7 @@
-import { createOrder } from '../api';
-import checkoutSteps from '../components/checkoutSteps';
-import {cleanCart, getCartItems, getPayment, getShipping} from '../localStorage'
-import { hideLoading, showLoading, showMessage } from '../utils';
+import { createOrder } from '../api.js';
+import checkoutSteps from '../components/checkoutSteps.js';
+import {cleanCart, getCartItems, getPayment, getShipping} from '../localStorage.js'
+import { hideLoading, showLoading, showMessage } from '../utils.js';
 
 const convertCartToOrder = ()=>{                            //       
     const orderItems = getCartItems();                      // Obtiene Items de carrito sino hay manda a pagina carrito 

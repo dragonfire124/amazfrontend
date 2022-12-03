@@ -1,20 +1,20 @@
-import HomeScreen from './screens/HomeScreen';
-import productScreen from "./screens/productScreen"
-import { hideLoading, parseRequestUrl, showLoading } from "./utils"
-import Error404Screen from "./screens/Error404Screen"
-import cartScreen from './screens/cartScreen';
-import signinScreen from './screens/signingScreen';
-import Header from './components/header';
-import registerScreen from './screens/registerScreen';
-import profileScreen from './screens/profileScreen';
-import shippingScreen from './screens/shippingScreen';
-import paymentScreen from './screens/paymentScreen';
-import placeOrderScreen from './screens/placeOrderScreen';
-import orderScreen from './screens/orderScreen';
-import dashBoardScreen from './screens/dashBoardScreen';
-import productlistScreen from './screens/productListScreen';
-import productEditScreen from './screens/productEditScreen';
-import orderListScreen from './screens/orderListScreen';
+import HomeScreen from './screens/HomeScreen.js';
+import productScreen from "./screens/productScreen.js"
+import { hideLoading, parseRequestUrl, showLoading } from "./utils.js"
+import Error404Screen from "./screens/Error404Screen.js"
+import cartScreen from './screens/cartScreen.js';
+import signinScreen from './screens/signingScreen.js';
+import Header from './components/header.js';
+import registerScreen from './screens/registerScreen.js';
+import profileScreen from './screens/profileScreen.js';
+import shippingScreen from './screens/shippingScreen.js';
+import paymentScreen from './screens/paymentScreen.js';
+import placeOrderScreen from './screens/placeOrderScreen.js';
+import orderScreen from './screens/orderScreen.js';
+import dashBoardScreen from './screens/dashBoardScreen.js';
+import productlistScreen from './screens/productListScreen.js';
+import productEditScreen from './screens/productEditScreen.js';
+import orderListScreen from './screens/orderListScreen.js';
 
 
 const routes = {

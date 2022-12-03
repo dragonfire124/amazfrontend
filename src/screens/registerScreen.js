@@ -1,6 +1,6 @@
-import { register } from "../api";
-import { getUserInfo, setUserInfo } from "../localStorage";
-import { hideLoading, redirectUSer, showLoading, showMessage } from "../utils";
+import { register } from "../api.js";
+import { getUserInfo, setUserInfo } from "../localStorage.js";
+import { hideLoading, redirectUSer, showLoading, showMessage } from "../utils.js";
 
 const registerScreen ={
     after_render: ()=>{

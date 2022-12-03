@@ -1,9 +1,9 @@
 /* eslint-disable no-alert */
 /* eslint-disable no-restricted-globals */
 
-import dashBoardMenu from "../components/dashBoardMenu";
-import {deleteOrder, getOrders} from "../api"
-import { hideLoading, rerender, showLoading, showMessage } from "../utils";
+import dashBoardMenu from "../components/dashBoardMenu.js";
+import {deleteOrder, getOrders} from "../api.js"
+import { hideLoading, rerender, showLoading, showMessage } from "../utils.js";
 
 const orderListScreen ={
     after_render :()=>{

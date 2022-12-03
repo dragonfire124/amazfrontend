@@ -1,7 +1,7 @@
 /* eslint-disable no-new */
-import { LineChart,  PieChart } from "chartist"
-import { getSummary } from "../api";
-import dashBoardMenu from "../components/dashBoardMenu";
+//import { LineChart,  PieChart } from "chartist"
+import { getSummary } from "../api.js";
+import dashBoardMenu from "../components/dashBoardMenu.js";
 
 
 let summary = {};

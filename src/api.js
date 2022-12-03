@@ -1,14 +1,14 @@
-import axios from "axios";
-import { apiUrl } from "./config";
-import { getUserInfo } from "./localStorage";
+//import axios from "axios";
+import { apiUrl } from "./config.js";
+import { getUserInfo } from "./localStorage.js";
 
 export const getProduct = async(id)=>{
+    const url= `${apiUrl}/api/products/${id}`;
     try {
-        const response = await axios({
-            url:`${apiUrl}/api/products/${id}`,
+        fetch(url, {
             method: 'GET',
             Headers:{
-                'Content-Type': 'aplication/json',
+                'Content-Type': 'application/json',
             },
         });
         if(response.statusText !== 'OK'){
@@ -20,23 +20,23 @@ export const getProduct = async(id)=>{
     }
 };
 
-export const getProducts = async()=>{
+export  const getProducts = async()=>{
+    const url = 'https://markadoback.onrender.com/api/products'
     try {
-        const response = await axios({
-            url:`${apiUrl}/api/products`,
-            method: 'GET',
-            Headers:{
-                'Content-Type': 'aplication/json',
-            },
-        });
-        if(response.statusText !== 'OK'){
+        const respuesta =  await fetch(url) 
+        const datos = await  respuesta.json()
+        return datos
+       } catch (error) {
+        console.log(error)
+       }
+}
+/*        if(response.statusText !== 'OK'){
             throw new Error(response.data.message);
         }
         return response.data;
     } catch (err) {
         return {error: err.response.data.message || err.message}
-    }
-};
+    }*/
 
 export  const createProduct = async()=>{
     try {

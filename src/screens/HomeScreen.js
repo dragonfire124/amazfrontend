@@ -1,15 +1,13 @@
-import { getProducts } from '../api';
-import rating from '../components/rating';
+import { getProducts } from '../api.js';
+import rating from '../components/rating.js';
 
 const HomeScreen ={
     render: async()=>{
-       const products = await getProducts()
-       if(products.error){
-        return `<div class="error">${products.error}</div>`
-       }
+        const products = await getProducts()
+        
         return `
         <ul class="products">
-        ${products.map (product => `
+        ${products.map(product => `
         <li>
                 <div class="product">
                 <a href="/#/product/${product._id}">

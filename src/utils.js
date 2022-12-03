@@ -1,4 +1,4 @@
-import { getCartItems } from "./localStorage";
+import { getCartItems } from "./localStorage.js";
 
 /* eslint-disable import/prefer-default-export */
 export const parseRequestUrl = () => {

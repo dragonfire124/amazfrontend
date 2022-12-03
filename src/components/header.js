@@ -1,4 +1,4 @@
-import { getUserInfo } from "../localStorage";
+import { getUserInfo } from "../localStorage.js";
 
 const Header ={
     render:()=>{
