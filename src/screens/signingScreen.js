@@ -10,10 +10,11 @@ const signinScreen ={
       .addEventListener('submit', async (e)=>{
         e.preventDefault();
         showLoading();
-        const data = await  signin({
-          email:  document.getElementById('email').value,
-          password: document.getElementById('password').value,
+        const data = await signin({
+        email:  document.getElementById('email').value,
+        password: document.getElementById('password').value,
         });
+        
         hideLoading();
         if(data.error){
           showMessage(data.error);

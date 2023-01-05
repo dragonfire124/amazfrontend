@@ -1,12 +1,12 @@
-//import axios from "axios";
+import axios from "axios";
 import { apiUrl } from "./config.js";
 import { getUserInfo } from "./localStorage.js";
 
 export const getProduct = async(id)=>{
-    const url= `${apiUrl}/api/products/${id}`;
     try {
-        fetch(url, {
-            method: 'GET',
+        const response = await axios({
+            url: `${apiUrl}/api/products/${id}`,
+    
             Headers:{
                 'Content-Type': 'application/json',
             },
@@ -20,23 +20,36 @@ export const getProduct = async(id)=>{
     }
 };
 
+/*     // getproducts con fetch
 export  const getProducts = async()=>{
-    const url = 'https://markadoback.onrender.com/api/products'
+    const url = 'https://merkadoback.onrender.com/api/products'
     try {
+
         const respuesta =  await fetch(url) 
         const datos = await  respuesta.json()
         return datos
        } catch (error) {
         console.log(error)
        }
-}
-/*        if(response.statusText !== 'OK'){
-            throw new Error(response.data.message);
+}*/
+
+export  const getProducts = async()=>{
+    try {
+        const response =  await axios({
+            url: `${apiUrl}/api/products`,
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+        if(response.statusText !== 'OK'){
+            throw new Error (response.data.message)                 
         }
         return response.data;
-    } catch (err) {
+       } catch (error) {
         return {error: err.response.data.message || err.message}
-    }*/
+       }
+}
 
 export  const createProduct = async()=>{
     try {
@@ -135,17 +148,17 @@ export  const uploadProductImage = async(formData)=>{
 }
 export const signin = async ({email,password})=>{
     try {
-        const response = await  axios({
+        const response = await axios({
             url: `${apiUrl}/api/users/signin`,
             method: 'POST',
-            header:{
+            headers:{
                 'Content-Type': 'application/json',
             },
             data:{
                 email,
                 password
             }
-        });
+        })
         if(response.statusText !== 'OK'){
             throw new Error(response.data.message)
         }
